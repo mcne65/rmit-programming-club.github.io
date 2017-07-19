@@ -4,24 +4,26 @@ title: Meetings
 permalink: /meetings/
 ---
 
-         <div class="row">
-            <div class="col-md-1"></div>
-              <!-- Meetings Links -->
-              <div class="blog-post-small">     
-                {% for meeting in site.meetings reversed %}
-                  <h1><a href="{{ meetings.url | prepend: site.baseurl }}">{{ meeting.title }}</a></h1>
-                  <p><i class="fa fa-calendar"></i> &nbsp;{{ meeting.date | date: "%b %-d, %Y" }}
+<div class="row">
+  <!-- Meetings Links -->
+  <div class="blog-post-small">
+    {% for meeting in site.meetings reversed %}
+      <div class="meeting">
+        <h1>
+          <a href="{{ meetings.url | prepend: site.baseurl }}">{{ meeting.title }}</a>
+        </h1>
+        <p>
+          <i class="fa fa-calendar"></i> &nbsp;{{ meeting.date | date: "%b %-d, %Y" }}
+        </p>
 
-                  </p>
-                  {% if meeting.content contains '<!-- more -->' %}
-                    <p>{{ meeting. | split:'<!-- more -->' | first }}
-                      <br><br>
-                      <a href="{{ meetings.url }}"class="btn btn-primary btn-sm">Read More</a>
-                    </p>
-                  {% else %}
-                    {{ meeting.content }}
-                  {% endif %}
-                {% endfor %}
-            	</div>
-            <div class="col-md-1"></div>
-         </div>
+        {% if meeting.content contains '<!-- more -->' %}
+          <p>{{ meeting. | split:'<!-- more -->' | first }}
+            <a href="{{ meetings.url }}"class="btn btn-primary btn-sm">Read More</a>
+          </p>
+        {% else %}
+          {{ meeting.content }}
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -34,11 +34,19 @@
   }
 }
 
+.blogpost {
+  margin: 0 0 48px;
+}
+
+.meeting {
+  margin: 0 0 80px;
+}
+
 .blog-post-small {
   text-align: left;
  
   p {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   a {
@@ -47,9 +55,25 @@
   }
 }
 
+.blog-post-content {		
+  font-size: 16px;
+  
+  img {
+    max-width:100%;
+    border:#eee 2px solid;
+  }
+}
+
 .bodycontent {
-  max-width: 1280px;
-  padding: 40px 0;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .bodycontent {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
 }
 
 .navbar {
@@ -59,8 +83,10 @@
 .navbar-inverse {
   background-color: #141414;
   border-color: #141414;
+  
   .navbar-brand {
     color: #ffffff;
+    
     &:hover, &:focus {
       color: #ffffff;
       background-color: transparent;
@@ -79,61 +105,73 @@
         background-color: #d8363d;
       }
     }
+
     .active > a {
       color: #ffffff;
       background-color: #d8363d;
+      
       &:hover, &:focus {
         color: #ffffff;
         background-color: #141414;
       }
     }
+
     .disabled > a {
       color: #444444;
       background-color: transparent;
+      
       &:hover, &:focus {
         color: #444444;
         background-color: transparent;
       }
     }
   }
+  
   .navbar-toggle {
     border-color: transparent;
+    
     &:hover, &:focus {
       background-color: transparent;
     }
+    
     .icon-bar {
       background-color: #ffffff;
     }
   }
+
   .navbar-collapse, .navbar-form {
     border-color: #007196;
   }
+
   .navbar-nav > .open > a {
     background-color: #006687;
     color: #ffffff;
+    
     &:hover, &:focus {
       background-color: #006687;
       color: #ffffff;
     }
   }
+
   .navbar-link {
     color: #ffffff;
+    
     &:hover {
       color: #ffffff;
     }
   }
+
   .btn-link {
     color: #ffffff;
+    
     &:hover, &:focus {
       color: #ffffff;
     }
+    
     &[disabled]:hover {
       color: #444444;
     }
   }
-}
-
-.jumb-bot {
 }
 
 .jumb-bot-jumbu {
@@ -141,6 +179,7 @@
   padding-top: 15px;
   padding-bottom: 1px;
   background: #eee;
+  
   p {
     padding-top: 13px;
   }
@@ -148,6 +187,7 @@
 
 .left-syms {
   font-size: 20px;
+  
   li a span {
     font-size: 12.5px;
     display: none;
@@ -158,24 +198,17 @@
   margin-top: 10px;
 }
 
-.blog-post-content {		
-  font-size: 16px;
-  img{
-    max-width:100%;
-    border:#eee 2px solid;
-  }
-}
-
 .footer {
   padding: 40px 0;
   border-bottom: #2b2b2b 1px solid;
   background: #141414;
   color: white;
-  margin-top: 10px;
+  
   p {
     margin-left: 0px;
     padding-left: 0px;
     text-align: center;
+    font-size: 16px;
   }
 }
 

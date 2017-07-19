@@ -1117,9 +1117,9 @@ html {
 
 body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 15px;
-  line-height: 1.42857143;
-  color: #222222;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
   background-color: #ffffff;
 }
 
@@ -1290,7 +1290,7 @@ h6, .h6 {
 }
 
 p {
-  margin: 0 0 10.5px;
+  margin: 0 0 20px;
 }
 
 .lead {
@@ -7127,8 +7127,9 @@ button.close {
 
 .navbar {
   border: none;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
+  
   .navbar-toggle:hover .icon-bar {
     background-color: #b3b3b3;
   }
